@@ -1,4 +1,4 @@
-﻿namespace StocksApp2
+﻿namespace StocksApp
 {
     public class TradingOptions
     {

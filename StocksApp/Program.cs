@@ -1,4 +1,4 @@
-using StocksApp2.Services;
+using StocksApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();

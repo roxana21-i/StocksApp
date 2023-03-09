@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using StocksApp2;
-using StocksApp2.Models;
-using StocksApp2.Services;
+using StocksApp;
+using StocksApp.Models;
+using StocksApp.Services;
 
 namespace StocksApp.Controllers
 {

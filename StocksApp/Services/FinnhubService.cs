@@ -1,7 +1,7 @@
-﻿using StocksApp2.ServiceContracts;
+﻿using StocksApp.ServiceContracts;
 using System.Text.Json;
 
-namespace StocksApp2.Services
+namespace StocksApp.Services
 {
     public class FinnhubService : IFinnhubService
     {
