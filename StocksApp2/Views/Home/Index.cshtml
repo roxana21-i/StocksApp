@@ -1,0 +1,48 @@
+﻿@model StocksApp2.Models.Stock
+@{
+    ViewBag.Title = "Home";
+}
+
+
+<form method="post">
+    <div class="box trading-panel">
+        <div class="flex trading-panel-flex">
+            <div id="stock-price-panel">
+                <div class="stock">
+                    <h1 class="stock-title">@ViewBag.CompanyName (@Model.StockSymbol)</h1>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Current price:</td>
+                                <th><small>$</small><span class="price" id="current-price">@Model.CurrentPrice.ToString("N")</span> <small><span class="text-grey" id="current-time">@ViewBag.CurrentTime</span></small></th>
+                            </tr>
+                            <tr>
+                                <td>Higest price</td>
+                                <th><small>$</small><span class="price">@Model.HighestPrice.ToString("N")</span></th>
+                            </tr>
+                            <tr>
+                                <td>Lowest price:</td>
+                                <th><small>$</small><span class="price">@Model.LowestPrice.ToString("N")</span></th>
+                            </tr>
+                            <tr>
+                                <td>Open price:</td>
+                                <th><small>$</small><span class="price">@Model.OpenPrice.ToString("N")</span></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" name="StockSymbol" id="StockSymbol" value="@Model.StockSymbol" />
+    <input type="hidden" id="FinnhubToken" value="@ViewBag.FinnhubToken" />
+</form>
+
+@section Scripts {
+    @* import the FinnhubScript.js file to update the price *@
+    <script src="~/Scripts/FinnhubScript.js">
+    </script>
+}
+
